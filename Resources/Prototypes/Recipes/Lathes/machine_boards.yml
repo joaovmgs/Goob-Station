@@ -223,6 +223,12 @@
   id: ChemDispenserMachineCircuitboard
   icon: { sprite: Structures/dispensers.rsi, state: industrial-working } # Goobstation
   result: ChemDispenserMachineCircuitboard
+- type: latheRecipe
+  parent: [ BaseGoldCircuitboardRecipe, BaseMedicalMachineRecipeCategory ]
+  id: PlantDnaManipulatorMachineCircuitboard
+  icon: { sprite: Structures/Machines/mixer.rsi, state: mixer_empty }
+  result: PlantDnaManipulatorMachineCircuitboard
+
 
 # Treatment
 - type: latheRecipe

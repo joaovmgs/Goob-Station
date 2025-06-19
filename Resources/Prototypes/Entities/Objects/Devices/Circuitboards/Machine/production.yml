@@ -1486,3 +1486,17 @@
         MatterBin: 2
         Manipulator: 2
 # Shitmed Change End
+- type: entity
+  id: PlantDnaManipulatorMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: plant DNA manipulator machine board
+  description: A machine printed circuit board for a Plant DNA Manipulator.
+  components:
+    - type: Sprite
+      state: medical
+    - type: MachineBoard
+      prototype: PlantDnaManipulator
+      stackRequirements:
+        Capacitor: 1
+        Glass: 1
+        Cable: 1
