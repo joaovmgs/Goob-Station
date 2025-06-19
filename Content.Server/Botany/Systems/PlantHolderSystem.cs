@@ -213,6 +213,7 @@ public sealed class PlantHolderSystem : EntitySystem
                     ("seedNoun", noun)), args.User, PopupType.Medium);
 
                 component.Seed = seed;
+                component.ActiveMutations.Clear();
                 component.Dead = false;
                 component.Age = 1;
                 if (seeds.HealthOverride != null)
@@ -844,6 +845,7 @@ public sealed class PlantHolderSystem : EntitySystem
         component.LastProduce = 0;
         component.Sampled = false;
         component.Harvest = false;
+        component.ActiveMutations.Clear();
         component.ImproperLight = false;
         component.ImproperPressure = false;
         component.ImproperHeat = false;

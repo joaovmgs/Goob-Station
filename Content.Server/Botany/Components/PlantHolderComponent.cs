@@ -139,6 +139,9 @@ public sealed partial class PlantHolderComponent : Component
     public float MutationLevel;
 
     [DataField]
+    public HashSet<string> ActiveMutations = new();
+
+    [DataField]
     public float Health;
 
     [DataField]
