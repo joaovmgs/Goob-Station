@@ -1,0 +1,10 @@
+plant-scanner-window-title = Plant Scanner
+plant-scanner-plant-name = Plant: { $name }
+plant-scanner-potency = Potency: { $potency }
+plant-scanner-endurance = Endurance: { $endurance }
+plant-scanner-health = Health: { $health }
+plant-scanner-mutations = Mutations:
+plant-scanner-no-mutations = No mutations.
+plant-scanner-chemicals = Chemicals:
+plant-scanner-no-chemicals = No chemicals.
+plant-scanner-no-plant = There's no plant here to scan.
