@@ -52,6 +52,10 @@ public sealed class MutationSystem : EntitySystem
                     var args = new EntityEffectBaseArgs(plantHolder, EntityManager);
                     mutation.Effect.Effect(args);
                 }
+                // Track mutation for scanners
+                if (TryComp<PlantHolderComponent>(plantHolder, out var holder))
+                    holder.ActiveMutations.Add(mutation.Name);
+
                 // Stat adjustments do not persist by being an attached effect, they just change the stat.
                 if (mutation.Persists && !seed.Mutations.Any(m => m.Name == mutation.Name))
                     seed.Mutations.Add(mutation);

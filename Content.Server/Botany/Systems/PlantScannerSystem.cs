@@ -51,12 +51,16 @@ public sealed class PlantScannerSystem : EntitySystem
         var name = Loc.GetString(seed.DisplayName);
         sb.AppendLine(Loc.GetString("plant-scanner-plant-name", ("name", name)));
 
-        if (seed.Mutations.Count > 0)
+        var mutationNames = new HashSet<string>(plantHolder.ActiveMutations);
+        foreach (var mut in seed.Mutations)
+            mutationNames.Add(mut.Name);
+
+        if (mutationNames.Count > 0)
         {
             sb.AppendLine(Loc.GetString("plant-scanner-mutations"));
-            foreach (var mut in seed.Mutations)
+            foreach (var name in mutationNames)
             {
-                sb.Append(" - ").AppendLine(mut.Name);
+                sb.Append(" - ").AppendLine(name);
             }
         }
         else
