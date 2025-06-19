@@ -19,6 +19,7 @@
 using Content.Shared.Atmos;
 using Content.Shared.EntityEffects;
 using Content.Shared.Random;
+using Content.Server.Botany.Components;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using System.Linq;

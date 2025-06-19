@@ -58,9 +58,9 @@ public sealed class PlantScannerSystem : EntitySystem
         if (mutationNames.Count > 0)
         {
             sb.AppendLine(Loc.GetString("plant-scanner-mutations"));
-            foreach (var name in mutationNames)
+            foreach (var mutName in mutationNames)
             {
-                sb.Append(" - ").AppendLine(name);
+                sb.Append(" - ").AppendLine(mutName);
             }
         }
         else
