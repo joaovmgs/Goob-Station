@@ -50,6 +50,9 @@ public sealed class PlantScannerSystem : EntitySystem
         var sb = new StringBuilder();
         var name = Loc.GetString(seed.DisplayName);
         sb.AppendLine(Loc.GetString("plant-scanner-plant-name", ("name", name)));
+        sb.AppendLine(Loc.GetString("plant-scanner-potency", ("potency", seed.Potency)));
+        sb.AppendLine(Loc.GetString("plant-scanner-endurance", ("endurance", seed.Endurance)));
+        sb.AppendLine(Loc.GetString("plant-scanner-health", ("health", plantHolder.Health)));
 
         var mutationNames = new HashSet<string>(plantHolder.ActiveMutations);
         foreach (var mut in seed.Mutations)
