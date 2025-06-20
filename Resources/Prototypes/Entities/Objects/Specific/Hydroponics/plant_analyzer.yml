@@ -1,0 +1,13 @@
+- type: entity
+  name: plant analyzer
+  parent: BaseItem
+  id: PlantAnalyzer
+  description: A device used to scan plants. It seems to malfunction.
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Medical/healthanalyzer.rsi
+    state: icon
+  - type: Item
+    heldPrefix: analyzer
+    storedRotation: -90
+  - type: PlantAnalyzer
