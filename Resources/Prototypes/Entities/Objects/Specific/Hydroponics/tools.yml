@@ -195,3 +195,22 @@
         - Produce
         - Seed
   - type: Dumpable
+- type: entity
+  name: plant scanner
+  id: PlantScanner
+  parent: BaseItem
+  description: A hand-held scanner for analyzing plants.
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Medical/healthanalyzer.rsi
+    state: icon
+  - type: Item
+    heldPrefix: analyzer
+  - type: ActivatableUI
+    key: enum.PlantScannerUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.PlantScannerUiKey.Key:
+        type: PlantScannerBoundUserInterface
+  - type: PlantScanner
+
